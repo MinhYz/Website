@@ -5,87 +5,20 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Minh" />
 	<meta name="twitter:description" content="Minh's website" />
-	
 	<link rel="shortcut icon" type="image/x-icon" href="assets/ha.ico">
-	<link rel="stylesheet" href="assets/fonts/gothampro/style.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/donate/style.css">
-	<style>
-html {
-    color: #ffffff;
-    height: 100%;
-    background-image: url("assets/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation-name: fadein;
-    animation-duration: 1s;
-    font-family: 'Gotham Pro';
-    font: 'Gotham Pro';
-}
-.center {
-    border-radius: 6%;
-    background-color: #000000a0;
-    background: none;
-    padding: 35px;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    top: 50%;
-    border: #ffffffb9 solid 1px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    animation-name: fadein;
-    animation-duration: 1s;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-}
-.buttons {
-    min-width: 300px;
-    width: 300px;
-    display: flex;
-    padding: 0px;
-    border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -khtml-border-radius: 8px;
-}
-.right {
-    float: right;
-    text-align: right;
-}
-.img {
-    border-radius: 60%;
-    width: 150px;
-    height: 150px;
-    animation-name: imgpopout;
-    animation-duration: 1s;
-}
-p {
-    margin: 0px;
-    padding: 0px;
-}
-div { cursor: default; }
-a { color: #9e09e8; }
-.center hr {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-hr { color: #9e09e8; }
-div:hover, a:hover { text-shadow: 0px 0px 8px; }
-}
-	</style>
 </head>
 
 <body>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="center">
+        <script>
+            document.body.style.backgroundImage = "url('assets/background.jpg')";
+        </script>
 		<img class="img" src="assets/avatar.jpg">
-		<div style="font-size: 180%;">Minh</div>
-		<div>Minh#0001</div>
-		<hr>       
+		<h9 style="font-size: 160%;">Minh</h9>
+		<h9>Minh#0004</h9>
+	<hr>       
 		<div class="buttons">
 			<a href="http://t.me/Minhxqmf" class="link" target="_blank" rel="noopener noreferrer">Telegram</a>
 			<a href="https://www.youtube.com/channel/UCVRc4W3MmmbekEKNhIUS69w" class="link" target="_blank" rel="noopener noreferrer">Youtube</a>
@@ -97,21 +30,12 @@ div:hover, a:hover { text-shadow: 0px 0px 8px; }
         <div class="buttons">
             <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'">Donate</a>
         </div>  
+    <hr>
 		<p>
-          <h9><span id="name">2021 © | Designed By Minh</span></h9>
+          <h9><span id="name">2022 © | Designed By Minh</span></h9>
         </p>
 	</span>
-	<script>
-		new JParticles.particle('#particles', {
-			color: ['pink', 'blue'],
-			proximity: 10,
-			range: 50,
-			parallax: true,
-			maxSpeed: 0.20,
-     		minSpeed: 0.20
-		});
-	</script>
-            <div id="donate">
+    <div id="donate">
         <div class="popup">
             <h1>Donate</h1>
             <p align="center">                   
@@ -122,4 +46,14 @@ div:hover, a:hover { text-shadow: 0px 0px 8px; }
             </p
                 <p align="center"><input class="btn" type="button" value="Close" title="Close" onclick="document.getElementById('donate').style.display='none';"></p>
             </p>
+    <script>
+        new JParticles.particle('#particles', {
+            color: ['pink', 'blue'],
+            proximity: 10,
+            range: 50,
+            parallax: true,
+            maxSpeed: 0.20,
+            minSpeed: 0.20
+        });
+    </script>
 </body>
