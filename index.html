@@ -4,7 +4,6 @@
     <script src="js/particle.js"></script>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Minh" />
-	<meta name="twitter:description" content="Minh's website" />
 	<link rel="shortcut icon" type="image/x-icon" href="assets/ha.ico">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,12 +11,17 @@
 <body>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="center">
+        <img class="img" src="assets/avatar.jpg">
         <script>
             document.body.style.backgroundImage = "url('assets/background.jpg')";
         </script>
-		<img class="img" src="assets/avatar.jpg">
-		<h9 style="font-size: 160%;">Minh</h9>
-		<h9>Minh#0004</h9>
+       <h2>
+       	<span id="name">Minh</span>
+       </h2>
+
+		<h3>
+          <span id="name">Minh#0004</span>
+        </h3>
 	<hr>       
 		<div class="buttons">
 			<a href="http://t.me/Minhxqmf" class="link" target="_blank" rel="noopener noreferrer">Telegram</a>
@@ -27,25 +31,12 @@
 			<a href="https://www.facebook.com/MinhG266/" class="link" target="_blank" rel="noopener noreferrer">Facebook</a>
 			<a href="https://linktr.ee/MinhNe" class="link" target="_blank" rel="noopener noreferrer">LinkTree</a>
 		</div>
-        <div class="buttons">
-            <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'">Donate</a>
-        </div>  
     <hr>
-		<p>
-          <h9><span id="name">2022 © | Designed By Minh</span></h9>
-        </p>
-	</span>
-    <div id="donate">
-        <div class="popup">
-            <h1>Donate</h1>
-            <p align="center">                   
-                <h2>Select payment method</h2>
-                <p align="center">
-                    <input type="button" class="link" value="Zalo" onclick="location.href='https://zalo.me/MinhYa'" >
-                    <input type="button" class="link" value="PayPal" onclick="location.href='https://www.paypal.com/paypalme/MinhStupid'" >
-            </p
-                <p align="center"><input class="btn" type="button" value="Close" title="Close" onclick="document.getElementById('donate').style.display='none';"></p>
-            </p>
+    <span id="copy">
+        <script>document.getElementById('copy').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+    </span>
+     © | Designed By Minh
+</div>
     <script>
         new JParticles.particle('#particles', {
             color: ['pink', 'blue'],
