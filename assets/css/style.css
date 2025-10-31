@@ -1,3 +1,6 @@
+/* ===========================
+   CÀI ĐẶT CHUNG
+=========================== */
 body {
     color: #ffffff;
     background-position: center;
@@ -5,39 +8,60 @@ body {
     background-size: cover;
     animation-name: fadein;
     animation-duration: 1s;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* Font chung cho tiêu đề và chữ */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('assets/fonts/minecraft.otf') format('opentype');
+}
+
+body, h1, h2, h3, p, a, button, input, span {
+    font-family: 'Minecraft', monospace;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+/* ===========================
+   KHỐI CHÍNH (center)
+=========================== */
 .center {
     border-radius: 6%;
     background-color: #000000a0;
-    background: none;
     padding: 35px;
     position: absolute;
     margin: auto;
     left: 50%;
     top: 50%;
+    z-index: 100;
     border: #ffffffb9 solid 1px;
     transform: translate(-50%, -50%);
     text-align: center;
     animation-name: fadein;
     animation-duration: 1s;
     backdrop-filter: blur(5px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 20px;
 }
+
+/* ===========================
+   BUTTONS
+=========================== */
 .buttons {
     min-width: 300px;
     width: 300px;
     display: flex;
-    padding: 0px;
-    border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -khtml-border-radius: 8px;
+    padding: 0;
+    border-radius: 8px;
 }
+
 .right {
     float: right;
     text-align: right;
 }
+
 .img {
     border-radius: 60%;
     width: 150px;
@@ -45,18 +69,25 @@ body {
     animation-name: imgpopout;
     animation-duration: 1s;
 }
+
 p {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 div { cursor: default; }
+
 a { color: #9e09e8; }
+
 .center hr {
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+/* ===========================
+   LINK STYLE (nút)
+=========================== */
 a.link {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -moz-tap-highlight-color: rgba(0,0,0,0);
@@ -65,55 +96,53 @@ a.link {
     background: var(--back-color);
     color: #fff;
     cursor: pointer;
-    border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -khtml-border-radius: 8px;
+    border-radius: 8px;
     width: 256px;
     text-align: center;
     text-decoration: none;
-    transition: .2s;
+    transition: 0.2s;
     border: var(--border);
 }
 
+/* Hiệu ứng hover (phát sáng nhẹ) */
 a.link:hover,
 button:hover {
     background: #fff6;
     color: #ffffff;
+    text-shadow: 0 0 8px #ffffff;
 }
 
+/* ===========================
+   TIÊU ĐỀ
+=========================== */
 h3 {
     font-style: normal;
     font-weight: inherit;
-    transition: .2ms;
-    -webkit-transition: .2ms;
-    -moz-transition: .2ms;
+    transition: 0.2s;
 }
 
 h2 {
     font-size: larger;
-    transition: .2ms;
-    -webkit-transition: .2ms;
-    -moz-transition: .2ms;
+    transition: 0.2s;
 }
 
+hr { color: #9e09e8; }
+
+/* ===========================
+   POPUP GỐC (cũ)
+=========================== */
 .popup {
-    top: -0%;
     left: 0;
     right: 0;       
     font-size: 14px;
     margin: auto;
-    width: 1000%;
+    width: 100%;
     min-width: 320px;
     max-width: 600px;
     position: absolute;
     padding: 15px 20px;
     border: 1px solid #383838;
     color: var(--popup-text-color);
-    z-index: 1000;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -ms-border-radius: 14px;
     border-radius: 20px;
     font: 'Product Sans';
     z-index: 999;
@@ -122,46 +151,150 @@ h2 {
     background: rgba(0, 0, 0, 0.65);
 }
 
+/* ===========================
+   INPUT BUTTONS
+=========================== */
 input[type=button] {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -moz-tap-highlight-color: rgba(0,0,0,0);
     padding: 12px 20px; 
     background: hsla(212, 100%, 40%, 0.774);
     color: #fff;
-    border: 0 none;
+    border: none;
     cursor: pointer;
-    border-radius: 8px; 
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -khtml-border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-bottom: 2px;
+    border-radius: 8px;
+    margin: 5px 0 2px 5px;
+    transition: 0.2s;
 }
 
 input[type=button]:hover {
-    background: hsla(212, 50%, 52%, 0.774)
+    background: hsla(212, 50%, 52%, 0.774);
 }
 
-input[type=button]:active, input[type=button]:focus {
+input[type=button]:focus,
+input[type=button]:active {
     outline: none;
 }
 
-input[type=button]::-moz-focus-inner {
-      border: 0;
-}
-
+input[type=button]::-moz-focus-inner,
 input[type=button]::-webkit-focus-inner {
     border: 0;
 }
 
 .btn {
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    -moz-transition: 0.2s;
-    backdrop-filter: blur(5px);
     transition: 0.2s;
+    backdrop-filter: blur(5px);
 }
 
-hr { color: #9e09e8; }
-div:hover, a:hover { text-shadow: 0px 0px 8px; }
+/* ===========================
+   NÚT MỞ QR
+=========================== */
+#showQrButton {
+    cursor: pointer;
+}
+
+/* ===========================
+   POPUP QR (hiện/ẩn mượt mà)
+=========================== */
+#qrContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    max-width: 300px;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #ffffffb9;
+    z-index: 1000;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+/* Khi hiển thị */
+#qrContainer.show {
+    animation: popupFadeIn 0.3s ease forwards;
+}
+
+/* Khi ẩn đi */
+#qrContainer.hide {
+    animation: popupFadeOut 0.3s ease forwards;
+}
+
+/* Animation hiện */
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animation ẩn */
+@keyframes popupFadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
+
+/* Ảnh QR */
+#techcombankQr {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+/* Tiêu đề trong popup */
+#qrContainer h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   ANIMATION CƠ BẢN KHÁC
+=========================== */
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes imgpopout {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Hiệu ứng lượn sóng cho từng chữ */
+#wave span {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+/* Tạo độ trễ cho từng ký tự để chúng nhấp nhô xen kẽ */
+#wave span:nth-child(1) { animation-delay: 0s; }
+#wave span:nth-child(2) { animation-delay: 0.1s; }
+#wave span:nth-child(3) { animation-delay: 0.2s; }
+#wave span:nth-child(4) { animation-delay: 0.3s; }
+#wave span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); } /* Độ cao sóng */
+}
+

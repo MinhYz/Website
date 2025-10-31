@@ -1,42 +1,51 @@
-	<head>
+<head>
 	<script src="js/animatedtitle.js"></script>
 	<script src="js/jparticles.js"></script>
     <script src="js/particle.js"></script>
+    <meta charset="UTF-8">
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Minh" />
 	<link rel="shortcut icon" type="image/x-icon" href="assets/ha.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
-	<span class="center">
-        <img class="img" src="assets/avatar.jpg">
+    <div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
+    <span class="center">
+        <img class="img" src="assets/avatar.png">
         <script>
             document.body.style.backgroundImage = "url('assets/background.jpg')";
         </script>
-       <h2>
-       	<span id="name">Minh</span>
-       </h2>
+        <h2>
+            <span id="name">Minh</span>
+        </h2>
 
-		<h3>
-          <span id="name">Minh#0004</span>
+        <h3>
+            <span id="name">minh.g</span>
         </h3>
-	<hr>       
-		<div class="buttons">
-			<a href="http://t.me/Minhxqmf" class="link" target="_blank" rel="noopener noreferrer">Telegram</a>
-			<a href="https://www.youtube.com/channel/UCVRc4W3MmmbekEKNhIUS69w" class="link" target="_blank" rel="noopener noreferrer">Youtube</a>
+        <hr>
+        <div class="buttons">
+            <a href="http://t.me/Minhxqmf" class="link" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://www.tiktok.com/@minhyah" class="link" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
-		<div class="buttons">
-			<a href="https://www.facebook.com/MinhG266/" class="link" target="_blank" rel="noopener noreferrer">Facebook</a>
-			<a href="https://linktr.ee/MinhNe" class="link" target="_blank" rel="noopener noreferrer">LinkTree</a>
-		</div>
-    <hr>
-    <span id="copy">
-        <script>document.getElementById('copy').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-    </span>
-     © | Designed By Minh
-</div>
+        <div class="buttons">
+            <a href="https://www.facebook.com/MinhG266/" class="link" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a id="showQrButton" class="link">Bank</a> 
+        </div>
+
+        <div id="qrContainer">
+            <h3>Quét mã QR để donate</h3>
+            <img id="techcombankQr" src="assets/Bank.jpg" alt="Mã QR Techcombank"> 
+            <p>Cảm ơn nhìu nhá <3 </p>
+        </div>
+    
+        <hr>
+        <span id="copy">
+            <script>document.getElementById('copy').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
+        © | Designed By Minh
+    </span> 
     <script>
         new JParticles.particle('#particles', {
             color: ['pink', 'blue'],
@@ -47,4 +56,11 @@
             minSpeed: 0.20
         });
     </script>
+    <script src="js/bank.js"></script>
+    <script>
+        const name = document.getElementById('name');
+        const text = name.textContent;
+        name.innerHTML = `<span id="wave">${text.split('').map(c => `<span>${c}</span>`).join('')}</span>`;
+    </script>
+
 </body>
